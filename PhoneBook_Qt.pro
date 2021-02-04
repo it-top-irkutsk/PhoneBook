@@ -13,12 +13,14 @@ SOURCES += \
     date.cpp \
     main.cpp \
     mainwindow.cpp \
+    person.cpp \
     phone.cpp
 
 HEADERS += \
     address.h \
     date.h \
     mainwindow.h \
+    person.h \
     phone.h
 
 FORMS += \

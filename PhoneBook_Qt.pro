@@ -12,12 +12,14 @@ SOURCES += \
     address.cpp \
     date.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    phone.cpp
 
 HEADERS += \
     address.h \
     date.h \
-    mainwindow.h
+    mainwindow.h \
+    phone.h
 
 FORMS += \
     mainwindow.ui

@@ -1,6 +1,3 @@
 #include "phone.h"
 
-Phone::Phone()
-{
-
-}
+Phone::Phone() {}

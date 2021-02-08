@@ -3,8 +3,8 @@
 
 #include <QString>
 #include <QVector>
+#include <QDate>
 
-#include "date.h"
 #include "address.h"
 #include "phone.h"
 
@@ -13,11 +13,12 @@ class Person
 public:
     QString firstName;
     QString lastName;
-    Date dateOfBirth;
+    QDate dateOfBirth;
     Address address;
     QVector<Phone> phones;
 
     Person();
+    Person(QString firstName, QString lastName, QDate dateOfBirth, Address address, QVector<Phone> phones);
 };
 
 #endif // PERSON_H

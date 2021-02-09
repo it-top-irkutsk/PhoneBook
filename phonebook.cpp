@@ -1,6 +1,10 @@
 #include "phonebook.h"
 
-phonebook::phonebook()
+Phonebook::Phonebook()
+{
+}
+
+Add_Contact(Person person)
 {
 
 }

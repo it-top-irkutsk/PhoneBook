@@ -1,11 +1,16 @@
 #ifndef PHONEBOOK_H
 #define PHONEBOOK_H
 
+#include "person.h"
+#include <QVector>
 
-class phonebook
+class Phonebook
 {
 public:
-    phonebook();
+    QVector<Person> phonebook;
+    Add_Contact(Person person);
+
+    Phonebook();
 };
 
 #endif // PHONEBOOK_H

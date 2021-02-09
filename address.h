@@ -14,7 +14,6 @@ public:
     QString house;
 
     Address();
-    Address(QString country, QString region, QString city, QString street, QString house);
 };
 
 #endif // ADDRESS_H

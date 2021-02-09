@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     address.cpp \
+    date.cpp \
     main.cpp \
     mainwindow.cpp \
     person.cpp \
@@ -17,6 +18,7 @@ SOURCES += \
 
 HEADERS += \
     address.h \
+    date.h \
     mainwindow.h \
     person.h \
     phone.h

@@ -36,7 +36,7 @@ void MainWindow::on_button_save_clicked()
     person.address.city = ui->input_addressCity->text();
     person.address.street = ui->input_addressStreet->text();
     person.address.house = ui->input_addressHouse->text();
-    Persons.push_back(person);
+    persons.push_back(person);
 
     ui->statusbar->showMessage("Данные успешно сохранены");
 }

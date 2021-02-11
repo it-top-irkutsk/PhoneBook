@@ -21,7 +21,7 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QVector<Person> Persons;
+    QVector<Person> persons;
     Person person;
 
 private slots:

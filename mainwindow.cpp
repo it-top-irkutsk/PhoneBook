@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QFile>
+#include <QtGui>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,6 +30,7 @@ void MainWindow::on_button_clear_clicked()
 
 void MainWindow::on_button_save_clicked()
 {
+    /*
     QString firstName = ui->input_firstNmae->text();
     QString lastName = ui->input_lastName->text();
     QDate dateOfBirth = ui->input_dateOfBirth->date();
@@ -37,10 +40,18 @@ void MainWindow::on_button_save_clicked()
     QString street = ui->input_addressStreet->text();
     QString house = ui->input_addressHouse->text();
 
-
     Address address(country, region, city, street, house);
     QVector<Phone> phones;
     Person person(firstName, lastName, dateOfBirth, address, phones);
 
     ui->statusbar->showMessage("Данные успешно сохранены");
+    */
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    QFile file_persons("persons.csv");
+    QFile file_phones("phones.csv");
+    Phonebook phonebook;
+    phonebook.Phonebook_import(file_persons, file_phones);
 }

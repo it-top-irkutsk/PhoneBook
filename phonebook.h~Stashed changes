@@ -8,12 +8,11 @@
 class Phonebook
 {
 public:
-    Phonebook();
-    void Phonebook_import(QFile& _file_persons, QFile& _file_phones);
-    void Set(Phonebook _phonebook);
-    Phonebook Get();
-private:
     QVector<Person> phonebook;
+    //void Add_Person(Person _person);
+    //Person Get_Person(int _index);
+    Phonebook();
+    Phonebook(QFile& _file_persons);
 };
 
 #endif // PHONEBOOK_H

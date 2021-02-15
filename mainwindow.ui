@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
+    <width>1170</width>
     <height>600</height>
    </rect>
   </property>
@@ -20,13 +20,13 @@
    <string>PhoneBook</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_Title">
+   <widget class="QLabel" name="label_title">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>20</y>
-      <width>251</width>
-      <height>71</height>
+      <x>549</x>
+      <y>41</y>
+      <width>170</width>
+      <height>27</height>
      </rect>
     </property>
     <property name="font">
@@ -53,10 +53,10 @@
    <widget class="QLabel" name="label_firstName">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>140</y>
-      <width>51</width>
-      <height>31</height>
+      <x>413</x>
+      <y>74</y>
+      <width>30</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="font">
@@ -69,13 +69,13 @@
      <string>Имя</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_LastName">
+   <widget class="QLabel" name="label_lastName">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>190</y>
-      <width>91</width>
-      <height>31</height>
+      <x>413</x>
+      <y>104</y>
+      <width>70</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -85,10 +85,10 @@
    <widget class="QLabel" name="label_dateOfBirth">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>230</y>
-      <width>171</width>
-      <height>31</height>
+      <x>413</x>
+      <y>134</y>
+      <width>130</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -98,10 +98,10 @@
    <widget class="QLabel" name="label_addressCountry">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>270</y>
-      <width>91</width>
-      <height>31</height>
+      <x>413</x>
+      <y>165</y>
+      <width>60</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -111,10 +111,10 @@
    <widget class="QLabel" name="label_addressRegion">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>310</y>
-      <width>111</width>
-      <height>31</height>
+      <x>413</x>
+      <y>195</y>
+      <width>70</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -124,10 +124,10 @@
    <widget class="QLabel" name="label_addressCity">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>350</y>
-      <width>101</width>
-      <height>31</height>
+      <x>413</x>
+      <y>225</y>
+      <width>50</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -137,10 +137,10 @@
    <widget class="QLabel" name="label_addressStreet">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>400</y>
-      <width>81</width>
-      <height>31</height>
+      <x>413</x>
+      <y>255</y>
+      <width>50</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -150,10 +150,10 @@
    <widget class="QLabel" name="label_addressHouse">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>450</y>
-      <width>61</width>
-      <height>31</height>
+      <x>413</x>
+      <y>285</y>
+      <width>30</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
@@ -163,9 +163,9 @@
    <widget class="QLineEdit" name="input_firstNmae">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>140</y>
-      <width>491</width>
+      <x>549</x>
+      <y>74</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -173,9 +173,9 @@
    <widget class="QLineEdit" name="input_lastName">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>190</y>
-      <width>491</width>
+      <x>549</x>
+      <y>104</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -183,19 +183,19 @@
    <widget class="QDateEdit" name="input_dateOfBirth">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>230</y>
-      <width>161</width>
-      <height>31</height>
+      <x>549</x>
+      <y>134</y>
+      <width>134</width>
+      <height>25</height>
      </rect>
     </property>
    </widget>
    <widget class="QLineEdit" name="input_addressCountry">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>280</y>
-      <width>481</width>
+      <x>549</x>
+      <y>165</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -203,9 +203,9 @@
    <widget class="QLineEdit" name="input_addressRegion">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>320</y>
-      <width>491</width>
+      <x>549</x>
+      <y>195</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -213,9 +213,9 @@
    <widget class="QLineEdit" name="input_addressCity">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>370</y>
-      <width>501</width>
+      <x>549</x>
+      <y>225</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -223,9 +223,9 @@
    <widget class="QLineEdit" name="input_addressStreet">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>410</y>
-      <width>511</width>
+      <x>549</x>
+      <y>255</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -233,9 +233,9 @@
    <widget class="QLineEdit" name="input_addressHouse">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>450</y>
-      <width>511</width>
+      <x>549</x>
+      <y>285</y>
+      <width>176</width>
       <height>24</height>
      </rect>
     </property>
@@ -243,10 +243,10 @@
    <widget class="QPushButton" name="button_clear">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>520</y>
-      <width>171</width>
-      <height>25</height>
+      <x>620</x>
+      <y>510</y>
+      <width>88</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="text">
@@ -256,14 +256,86 @@
    <widget class="QPushButton" name="button_save">
     <property name="geometry">
      <rect>
-      <x>599</x>
-      <y>520</y>
-      <width>151</width>
-      <height>25</height>
+      <x>725</x>
+      <y>513</y>
+      <width>98</width>
+      <height>24</height>
      </rect>
     </property>
     <property name="text">
      <string>Сохранить</string>
+    </property>
+   </widget>
+   <widget class="QListView" name="list_persons">
+    <property name="geometry">
+     <rect>
+      <x>151</x>
+      <y>41</y>
+      <width>256</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>413</x>
+      <y>315</y>
+      <width>80</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Телефоны</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_add">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>410</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Добавить контакт</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_del">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>440</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Удалить контакт</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>490</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>импорт и вывод</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="list_phones">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>310</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
     </property>
    </widget>
   </widget>

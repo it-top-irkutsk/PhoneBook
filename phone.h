@@ -6,9 +6,8 @@
 class Phone
 {
 public:
-    QString number;
     QString type;
-
+    QString number;
     Phone();
 };
 

@@ -1,0 +1,62 @@
+#include "phonebook.h"
+
+Phonebook::Phonebook()
+{
+}
+
+Phonebook::Phonebook(QFile& _file_persons)
+{
+    if (!_file_persons.exists() && _file_persons.open(QIODevice::WriteOnly)) { _file_persons.close(); }
+    else if (_file_persons.open(QIODevice::WriteOnly))
+    {
+        QString str = "";
+        QStringList strList;
+        Person person;
+        Address address;
+        int day = 0;
+        int month = 0;
+        int year = 0;
+        QFile file_phones("phones.csv");
+        Phone phone(file_phones);
+
+        while(!_file_persons.atEnd())
+        {
+            str = _file_persons.readLine();
+            strList = str.split(':');
+
+            person.firstName = strList.at(0);
+            person.lastName = strList.at(1);
+
+            day = strList.at(2).toInt();
+            month = strList.at(3).toInt();
+            year = strList.at(4).toInt();
+            person.dateOfBirth = QDate(day,month,year);
+
+            address.post_index = strList.at(5).toInt();
+            address.country = strList.at(6);
+            address.region = strList.at(7);
+            address.city = strList.at(8);
+            address.street = strList.at(9);
+            address.house = strList.at(10);
+            person.address = address;
+
+            person.phones = phone;
+
+
+            phonebook.push_back(person);
+        }
+        _file_persons.close();
+    }
+}
+/*
+void Phonebook::Add_Person(Person _person)
+{
+    this->phonebook.push_back(_person);
+}
+
+Person Phonebook::Get_Person(int _index)
+{
+    Person person = this->phonebook.at(_index);
+    return person;
+}
+*/

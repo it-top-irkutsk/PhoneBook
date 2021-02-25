@@ -3,12 +3,16 @@
 
 #include <QString>
 
+
 class Phone
 {
 public:
     QString type;
     QString number;
+
     Phone();
 };
+
+
 
 #endif // PHONE_H

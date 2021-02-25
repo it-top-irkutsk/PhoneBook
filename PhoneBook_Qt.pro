@@ -13,17 +13,13 @@ SOURCES += \
     main.cpp \
     mainwindow.cpp \
     person.cpp \
-    phone.cpp \
-    phonebook.cpp \
-    phones.cpp
+    phone.cpp
 
 HEADERS += \
     address.h \
     mainwindow.h \
     person.h \
-    phone.h \
-    phonebook.h \
-    phones.h
+    phone.h
 
 FORMS += \
     mainwindow.ui

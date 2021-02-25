@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1170</width>
-    <height>600</height>
+    <width>1064</width>
+    <height>682</height>
    </rect>
   </property>
   <property name="font">
@@ -20,322 +20,212 @@
    <string>PhoneBook</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="label_title">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>549</x>
-      <y>41</y>
-      <width>170</width>
-      <height>27</height>
+      <x>10</x>
+      <y>10</y>
+      <width>321</width>
+      <height>501</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Lucida Console</family>
-      <pointsize>20</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 0, 0);</string>
-    </property>
-    <property name="text">
-     <string>Справочник</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::PlainText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="4" column="0">
+      <widget class="QPushButton" name="button_export">
+       <property name="text">
+        <string> Экспорт в файл</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QListWidget" name="list_persons"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="button_import">
+       <property name="text">
+        <string>Импорт из файла</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="button_del">
+       <property name="text">
+        <string>Удалить контакт</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="button_add">
+       <property name="text">
+        <string>Добавить контакт</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="label_firstName">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>413</x>
-      <y>74</y>
-      <width>30</width>
-      <height>16</height>
+      <x>351</x>
+      <y>11</y>
+      <width>361</width>
+      <height>498</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Lucida Console</family>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>Имя</string>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="1" colspan="2">
+      <widget class="QLabel" name="label_title">
+       <property name="font">
+        <font>
+         <family>Lucida Console</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>Справочник</string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_firstName">
+       <property name="font">
+        <font>
+         <family>Lucida Console</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Имя</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_firstName"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_lastName">
+       <property name="text">
+        <string>Фамилия</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_lastName"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_dateOfBirth">
+       <property name="font">
+        <font>
+         <family>Lucida Console</family>
+         <pointsize>9</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Дата рождения</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1" colspan="2">
+      <widget class="QDateEdit" name="input_dateOfBirth"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_addressCountry">
+       <property name="text">
+        <string>Страна</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_addressCountry"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_addressRegion">
+       <property name="text">
+        <string>Область</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_addressRegion"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_addressCity">
+       <property name="text">
+        <string>Город</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_addressCity"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_addressStreet">
+       <property name="text">
+        <string>Улица</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_addressStreet"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_addressHouse">
+       <property name="text">
+        <string>Дом</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1" colspan="2">
+      <widget class="QLineEdit" name="input_addressHouse"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_phones">
+       <property name="text">
+        <string>Телефоны</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1" colspan="2">
+      <widget class="QTableWidget" name="table_phones"/>
+     </item>
+     <item row="10" column="1">
+      <widget class="QPushButton" name="button_clear">
+       <property name="text">
+        <string>Очистить</string>
+       </property>
+      </widget>
+     </item>
+     <item row="10" column="2">
+      <widget class="QPushButton" name="button_save">
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
-   <widget class="QLabel" name="label_lastName">
+   <widget class="QLabel" name="label_test">
     <property name="geometry">
      <rect>
-      <x>413</x>
-      <y>104</y>
-      <width>70</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Фамилия</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_dateOfBirth">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>134</y>
-      <width>130</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Дата рождения</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_addressCountry">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>165</y>
-      <width>60</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Страна</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_addressRegion">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>195</y>
-      <width>70</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Область</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_addressCity">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>225</y>
-      <width>50</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Город</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_addressStreet">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>255</y>
-      <width>50</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Улица</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_addressHouse">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>285</y>
-      <width>30</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Дом</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_firstNmae">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>74</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_lastName">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>104</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QDateEdit" name="input_dateOfBirth">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>134</y>
-      <width>134</width>
-      <height>25</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_addressCountry">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>165</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_addressRegion">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>195</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_addressCity">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>225</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_addressStreet">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>255</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="input_addressHouse">
-    <property name="geometry">
-     <rect>
-      <x>549</x>
-      <y>285</y>
-      <width>176</width>
-      <height>24</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_clear">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>510</y>
-      <width>88</width>
-      <height>24</height>
+      <x>20</x>
+      <y>530</y>
+      <width>931</width>
+      <height>114</height>
      </rect>
     </property>
     <property name="text">
-     <string>Очистить</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_save">
-    <property name="geometry">
-     <rect>
-      <x>725</x>
-      <y>513</y>
-      <width>98</width>
-      <height>24</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Сохранить</string>
-    </property>
-   </widget>
-   <widget class="QListView" name="list_persons">
-    <property name="geometry">
-     <rect>
-      <x>151</x>
-      <y>41</y>
-      <width>256</width>
-      <height>351</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>413</x>
-      <y>315</y>
-      <width>80</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Телефоны</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_add">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>410</y>
-      <width>181</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Добавить контакт</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="button_del">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>440</y>
-      <width>181</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Удалить контакт</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>160</x>
-      <y>490</y>
-      <width>191</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>импорт и вывод</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="list_phones">
-    <property name="geometry">
-     <rect>
-      <x>550</x>
-      <y>310</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
+     <string>test</string>
     </property>
    </widget>
   </widget>

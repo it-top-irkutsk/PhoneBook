@@ -1,11 +1,12 @@
 #ifndef PERSON_H
 #define PERSON_H
 
-#include "address.h"
-#include "phones.h"
-
 #include <QString>
+#include <QVector>
 #include <QDate>
+
+#include "address.h"
+#include "phone.h"
 
 class Person
 {
@@ -14,7 +15,8 @@ public:
     QString lastName;
     QDate dateOfBirth;
     Address address;
-    Phones phones;
+    QVector<Phone> phones;
+
     Person();
 };
 

@@ -3,12 +3,17 @@
 #include <QFile>
 #include <QtGui>
 #include <QString>
+#include <QSqlQuery>
+#include <QtSql/QSqlDatabase>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+
 }
 
 MainWindow::~MainWindow()
@@ -35,13 +40,64 @@ void MainWindow::on_button_save_clicked()
 
 void MainWindow::on_button_import_clicked()
 {
-    import_phonebook("persons.csv", "phones.csv");
+    //import_phonebook("persons.csv", "phones.csv");
+    import_phonebook();
     update_ui();
 }
 
 void MainWindow::on_button_export_clicked()
 {
    export_phonebook("persons.csv", "phones.csv");
+}
+
+bool MainWindow::connect_db()
+{
+    return db.open();
+}
+
+void MainWindow::import_phonebook()
+{
+    QSqlDatabase dbb;
+    dbb = QSqlDatabase::addDatabase("QSQLITE");
+    dbb.setDatabaseName("phonebook.sqlite");
+
+    if (dbb.open())
+    {
+        QSqlQuery query_person;
+        query_person.exec("SELECT id, first_name, last_name, date_of_birth, post_index, country, region, city, street, house FROM table_person");
+        //query_person.exec("SELECT first_name FROM table_person");
+        int s = query_person.size();
+        while (query_person.next())
+        {
+            Person person;
+            Phone phone;
+            Address address;
+
+            QString id = query_person.value(0).toString();
+            person.firstName = query_person.value(1).toString();
+            person.lastName = query_person.value(2).toString();
+            person.dateOfBirth = query_person.value(3).toDate();
+
+            address.post_index = query_person.value(4).toInt();
+            address.country = query_person.value(5).toString();
+            address.region = query_person.value(6).toString();
+            address.city = query_person.value(7).toString();
+            address.street = query_person.value(8).toString();
+            address.house = query_person.value(9).toString();
+            person.address = address;
+
+            QSqlQuery query_phone;
+            query_phone.exec("SELECT type, number FROM table_phone, table_person WHERE table_phone.person_id =" + id);
+            while (query_phone.next())
+            {
+                phone.type = query_phone.value(0).toString();
+                phone.number = query_phone.value(1).toString();
+                person.phones.push_back(phone);
+            }
+            phonebook.push_back(person);
+            person.phones.clear();
+        }
+    }
 }
 
 void MainWindow::import_phonebook(QString _persons, QString _phones)
